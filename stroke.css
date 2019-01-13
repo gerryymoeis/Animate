@@ -1,0 +1,136 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+body
+{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+    background: url(universe.jpg) no-repeat 50% 50%;
+	background-size: cover;
+	height: 100vh;
+	display: table;
+}
+
+.container
+{
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 10%;
+	transform: translate(-50%, -50%);
+}
+
+.container span
+{
+	color: white;
+	text-transform: uppercase;
+	display: block;
+}
+
+.text1
+{
+	font-size: 20px;
+	font-weight: 400;
+	letter-spacing: 8px;
+	margin-bottom: 20px;
+	background: black;
+	position: relative;
+	animation: text1 3s 1;
+}
+
+.text2
+{
+	font-size: 30px;
+	color: #6ab04a;
+}
+
+.wrapper
+{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 40%;
+}
+
+.img1
+{
+	position: fixed;
+	bottom: 0;
+	left:0;
+	width: 150px;
+	height: 150px;
+}
+
+.audio1
+{
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	width: 180px;
+	height: 50px;
+}
+
+path
+{
+	stroke: #fff;
+	fill: #fff;
+	stroke-dasharray: 1800;
+	opacity: 10;
+	animation: animate 5s 3 cubic-bezier(0,0.23,1,.1);
+}
+
+@keyframes text1 
+{
+	0%
+	{
+		color: black;
+		margin-bottom: -75px;
+	}
+	30%
+	{
+		letter-spacing: 25px;
+		margin-bottom: -75px;
+	}
+	90%
+	{
+		letter-spacing: 8px;
+		margin-bottom: -75px;
+	}
+}
+
+@keyframes animate
+{
+	0%
+	{
+		opacity: 0;
+		fill: none;
+		stroke-dashoffset: 1800;
+	}
+	30%
+	{
+		opacity: 0;
+		fill: none;
+		stroke-dashoffset: 1800;
+	}
+	50%
+	{
+		fill: rgba(255,255,255,0);
+	}
+	90%
+	{
+		fill: rgba(255,255,255,0);
+	}
+	100%
+	{
+		opacity: 10;
+		fill: rgba(255,255,255,1);
+		stroke-dashoffset: 0;
+	}
+}
